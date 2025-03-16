@@ -1,65 +1,174 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
-:root {
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.general {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 a {
   font-weight: 500;
   color: #646cff;
-  text-decoration: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
+
 a:hover {
   color: #535bf2;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: green;
+  color: white;
+  border: 2px solid green;
   cursor: pointer;
-  transition: border-color 0.25s;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
 }
+
 button:hover {
-  border-color: #646cff;
+  background-color: white;
+  color: green;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Not Found Page */
+.notFound {
+  color: #b1b1b1;
+  font-size: 2rem;
+  margin-top: 50px;
+}
+
+input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  border-color: #646cff;
+  outline: none;
+}
+
+/* News Section */
+.newsTitle {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  color: #535bf2;
+  text-transform: uppercase;
+}
+
+.fullNewsScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news {
+  width: 100%;
+  max-width: 1740px;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  padding: 20px;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+li img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.dateCategory {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* User Detail */
+.userDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+.userDetail img{
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.userDetail p{
+  width: 100%;
+  max-width: 700px;
+  font-size: 1.2rem;
+  margin: 0;
+}
+.userDetail span{
+  font-weight: 600;
+  margin-bottom: 10px;
+
+
 }
